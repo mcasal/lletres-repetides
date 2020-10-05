@@ -13,6 +13,20 @@
         for (let i = 0; i < nom.length; i++) {
             console.log(nom[i]);
         }
+
+        // FASE 2
+        let nom1 = ['M', 'A', 'R', 1, 'T', 'A'];
+        let regex = /[aeiou]/gi;
+
+        for (let n = 0; n < nom1.length; n++) {
+            if (!isNaN(nom1[n])) {
+                console.log("Els noms de persones no contenen el número: " +nom1[n]);
+            } else if (nom1[n].match(regex)) {
+                console.log("He trobat la VOCAL: " +nom1[n]);
+            } else {
+                console.log("He trobat la CONSONANT: " +nom1[n]);
+            }       
+        }
         
     </script>
 </body>
