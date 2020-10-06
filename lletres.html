@@ -21,13 +21,25 @@
         for (let n = 0; n < nom1.length; n++) {
             if (!isNaN(nom1[n])) {
                 console.log("Els noms de persones no contenen el número: " +nom1[n]);
-            } else if (nom1[n].match(regex)) {
+            } else if (nom1[n].match(regex)) { // metode de string
                 console.log("He trobat la VOCAL: " +nom1[n]);
             } else {
                 console.log("He trobat la CONSONANT: " +nom1[n]);
             }       
         }
-        
+
+        // FASE 3
+        let nomMap = [];
+
+        nom.map(function(lletra) {
+            if (nomMap[lletra] == undefined) {
+                nomMap[lletra] = 1;
+            } else {
+                nomMap[lletra]++;
+            }
+        })
+
+        console.log(nomMap);
     </script>
 </body>
 </html>
